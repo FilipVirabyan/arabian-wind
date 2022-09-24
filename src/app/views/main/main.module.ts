@@ -11,6 +11,7 @@ import { LastLinkSectionComponent } from './last-link-section/last-link-section.
 import { ProductsSliderComponent } from './products-slider/products-slider.component';
 import { AdSectionComponent } from './ad-section/ad-section.component';
 import { FooterComponent } from './footer/footer.component';
+import { ProductPageComponent } from './product-page/product-page.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { FooterComponent } from './footer/footer.component';
     LastLinkSectionComponent,
     ProductsSliderComponent,
     AdSectionComponent,
-    FooterComponent
+    FooterComponent,
+    ProductPageComponent
   ],
   imports: [
     CommonModule,
