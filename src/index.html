@@ -6,8 +6,185 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- font -->
+  <script type="text/javascript">
+    WebFontConfig = {
+      google: {
+        families: [
+
+          'Cabin:100,200,300,400,500,600,700,800,900'
+
+
+          ,
+
+          'Grand Hotel:100,200,300,400,500,600,700,800,900'
+
+
+          ,
+
+          'Amatic SC:100,200,300,400,500,600,700,800,900'
+
+
+        ]
+      }
+    };
+    (function () {
+      var wf = document.createElement('script');
+      wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+        '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+      wf.type = 'text/javascript';
+      wf.async = 'true';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(wf, s);
+    })();
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+<style>
+  .header-v1-h1 {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  #header .menu ul li .nav-link {
+    color: #1e1e1e;
+    font-size: 18px;
+  }
+
+  #header .menu ul li .nav-link:before {
+    border-bottom: 2px solid #1e1e1e;
+    border-right: 2px solid #1e1e1e;
+  }
+
+  #header .menu ul li .nav-link:after {
+    border-top: 2px solid #1e1e1e;
+    border-left: 2px solid #1e1e1e;
+  }
+
+  #header .currencies-login .cart-login-search ul li a svg {
+    fill: #1e1e1e;
+  }
+
+  #header .currencies-login .cart-login-search ul li a i {
+    color: #1e1e1e;
+  }
+
+  #header .currencies-login .cart-login-search ul li .cart .number-cart {
+    background-color: #eb747b;
+    color: #fff;
+  }
+</style>
+<app-root></app-root>
 </body>
+<!--<script>-->
+<!--  jQuery(function () {-->
+<!--    jQuery('.swatch :radio').change(function () {-->
+<!--      var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');-->
+<!--      var optionValue = jQuery(this).val();-->
+<!--      jQuery(this)-->
+<!--        .closest('form')-->
+<!--        .find('.single-option-selector')-->
+<!--        .eq(optionIndex)-->
+<!--        .val(optionValue)-->
+<!--        .trigger('change');-->
+<!--    });-->
+<!--  });-->
+<!--</script>-->
+<!-- /snippets/ajax-cart-template.liquid -->
+
+<!--<script id="CartTemplate" type="text/template">-->
+
+<!--  <form action="/cart" method="post" novalidate class="ajaxcart">-->
+<!--    <div class="prod">-->
+<!--      <div class="product-cart">-->
+<!--        {{#items}}-->
+<!--        <ol class="minicart_item list-unstyled mb-0">-->
+<!--          <li class="d-flex">-->
+<!--            <div class="thumb_img_cartmini">-->
+<!--              <a href="{{url}}" title="" class=""><img alt="{{name}}" src="{{img}}"></a>-->
+<!--            </div>-->
+<!--            <div class="product-detail">-->
+<!--              <h3 class="product_name_mini">-->
+<!--                <a href="{{url}}">{{name}}</a>-->
+<!--                {{#if variation}}-->
+<!--                <span class="ajaxcart__product-meta">{{variation}}</span>-->
+<!--                {{/if}}-->
+<!--                {{#properties}}-->
+<!--                {{#each this}}-->
+<!--                {{#if this}}-->
+<!--                <span class="ajaxcart__product-meta">{{@key}}: {{this}}</span>-->
+<!--                {{/if}}-->
+<!--                {{/each}}-->
+<!--                {{/properties}}-->
+
+<!--              </h3>-->
+<!--              <div class="product_info">-->
+<!--                <div class="product_quanity">QTY : {{itemQty}}</div>-->
+<!--                <div class="product_price">-->
+<!--                  <span class="price_sale">{{{price}}}</span>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--            <div class="produc_remove">-->
+<!--              <a href="/cart/change?line={{line}}&amp;quantity=0" class="remove-product"><i-->
+<!--                class="ti-close"></i></a>-->
+<!--            </div>-->
+<!--          </li>-->
+<!--        </ol>-->
+<!--        {{/items}}-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="sub-total">-->
+<!--      <span class="total-title float-left">Total:</span>-->
+<!--      <span class="total-price float-right">{{{totalPrice}}}</span>-->
+<!--    </div>-->
+<!--    <div class="action-checkout">-->
+<!--      <a href="/cart" class="button-viewcart">-->
+<!--        <span>View cart</span>-->
+<!--      </a>-->
+<!--      <a href="/checkout" class="button-checkout">-->
+<!--        <span>Check out</span>-->
+<!--      </a>-->
+<!--    </div>-->
+<!--  </form>-->
+
+
+<!--</script>-->
+<!--<script id="AjaxQty" type="text/template">-->
+
+<!--  <div class="ajaxcart__qty">-->
+<!--    <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty&#45;&#45;minus icon-fallback-text" data-id="{{id}}"-->
+<!--            data-qty="{{itemMinus}}">-->
+<!--      <span class="icon icon-minus" aria-hidden="true"></span>-->
+<!--      <span class="fa fa-angle-down"></span>-->
+<!--    </button>-->
+<!--    <input type="text" class="ajaxcart__qty-num" value="{{itemQty}}" min="0" data-id="{{id}}" aria-label="quantity"-->
+<!--           pattern="[0-9]*">-->
+<!--    <button type="button" class="ajaxcart__qty-adjust ajaxcart__qty&#45;&#45;plus icon-fallback-text" data-id="{{id}}"-->
+<!--            data-qty="{{itemAdd}}">-->
+<!--      <span class="icon icon-plus" aria-hidden="true"></span>-->
+<!--      <span class="fa fa-angle-up"></span>-->
+<!--    </button>-->
+<!--  </div>-->
+
+<!--</script>-->
+<!--<script id="JsQty" type="text/template">-->
+
+<!--  <div class="js-qty">-->
+<!--    <button type="button" class="qty_minus js-qty__adjust js-qty__adjust&#45;&#45;minus icon-fallback-text" data-id="{{id}}"-->
+<!--            data-qty="{{itemMinus}}">-->
+<!--      <span class="icon icon-minus" aria-hidden="true"></span>-->
+<!--      <span class="fa fa-caret-down"></span>-->
+<!--    </button>-->
+<!--    <input type="text" class="js-qty__num" value="{{itemQty}}" min="1" data-id="{{id}}" aria-label="quantity"-->
+<!--           pattern="[0-9]*" name="{{inputName}}" id="{{inputId}}">-->
+<!--    <button type="button" class="qty_plus js-qty__adjust js-qty__adjust&#45;&#45;plus icon-fallback-text" data-id="{{id}}"-->
+<!--            data-qty="{{itemAdd}}">-->
+<!--      <span class="icon icon-plus" aria-hidden="true"></span>-->
+<!--      <span class="fa fa-caret-up"></span>-->
+<!--    </button>-->
+<!--  </div>-->
+
+<!--</script>-->
 </html>
