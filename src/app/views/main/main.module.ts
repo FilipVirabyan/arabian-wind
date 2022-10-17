@@ -12,6 +12,12 @@ import { ProductsSliderComponent } from './products-slider/products-slider.compo
 import { AdSectionComponent } from './ad-section/ad-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ContactComponent } from './contact/contact.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { GetNoteNamePipe } from './pipes/get-note-name.pipe';
+import {TranslateModule} from '@ngx-translate/core';
+import { LanguageControllerComponent } from './language-controller/language-controller.component';
+import { NotesSliderPipe } from './pipes/notes-slider.pipe';
 
 
 @NgModule({
@@ -25,11 +31,17 @@ import { ProductPageComponent } from './product-page/product-page.component';
     ProductsSliderComponent,
     AdSectionComponent,
     FooterComponent,
-    ProductPageComponent
+    ProductPageComponent,
+    ContactComponent,
+    GetNoteNamePipe,
+    LanguageControllerComponent,
+    NotesSliderPipe
   ],
   imports: [
     CommonModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ReactiveFormsModule,
+    TranslateModule,
   ]
 })
 export class MainModule { }

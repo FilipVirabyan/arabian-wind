@@ -1,5 +1,8 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {environment} from '../../../../environments/environment';
+import {Product} from '../../../core/models/product.interface';
+import {ProductCategory} from '../../../core/enums';
+import {NgxSpinnerService} from 'ngx-spinner';
 
 @Component({
   selector: 'app-products-with-filter',
@@ -7,10 +10,13 @@ import {environment} from '../../../../environments/environment';
   styleUrls: ['./products-with-filter.component.scss']
 })
 export class ProductsWithFilterComponent implements OnInit {
-  @Input() products: any = []
+  @Input() products: Product[] = []
+  @Input() loading!: boolean;
+  @Output() categoryChange: EventEmitter<ProductCategory> = new EventEmitter<ProductCategory>();
   imageBase = `${environment.baseUrl}products/image/`
+  productCategory = ProductCategory
 
-  constructor() {
+  constructor(private spinner: NgxSpinnerService,) {
   }
 
   ngOnInit(): void {

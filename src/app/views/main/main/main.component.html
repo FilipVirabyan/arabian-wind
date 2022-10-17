@@ -1,9 +1,15 @@
 <app-header></app-header>
 <app-main-slider></app-main-slider>
 <app-middle-link-section></app-middle-link-section>
-<app-products-with-filter [products]="filteredProducts"></app-products-with-filter>
+<app-products-with-filter
+  (categoryChange)="getFilterProducts($event)"
+  [loading]="categoriesLoading"
+  [products]="filteredProducts">
+</app-products-with-filter>
 <app-last-link-section></app-last-link-section>
-<app-products-slider></app-products-slider>
+<app-products-slider
+  [prods]="sliderProducts">
+</app-products-slider>
 <app-ad-section></app-ad-section>
 <app-footer></app-footer>
 <div id="back-to-top" class="one">

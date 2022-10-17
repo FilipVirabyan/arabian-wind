@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'http://192.168.1.1/'
+  baseUrl: 'http://10.0.0.51:3000/'
 };

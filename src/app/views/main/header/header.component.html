@@ -1,21 +1,17 @@
 <div id="shopify-section-header" class="shopify-section index-section"><!-- /sections/header.liquid -->
-
-
-  <header id="header" class="header-v1-h1 js_height_hd jsheader1 d-none d-xl-block header-absolute "
+  <header id="header" class="header-v1-h1 js_height_hd jsheader1 d-none d-xl-block header-absolute"
+          [class.dark]="isDark"
           [ngClass]="classList">
     <div class="container container-v1">
       <div class="row align-items-center">
         <div class="col-lg-2">
           <div class="logo">
             <div class="center logo delay05">
-
-              <a href="index.html">
-
-                <img src="./assets/files/logoba7b.png?v=1582085465"
-                     width="190" alt="Charmee - Perfume And Cosmetics Shopify Theme">
-
+              <a [routerLink]="''">
+                <img src="https://cdn.discordapp.com/attachments/902439034318651415/1027674492086005880/1.png"
+                     width="150"
+                     alt="Arabian Wind">
               </a>
-
             </div>
           </div>
         </div>
@@ -25,13 +21,17 @@
               <div class="collapse navbar-collapse">
                 <ul class="navbar-nav">
                   <li class="nav-item dropdown">
-                    <a href="pages/about-us.html" title="About Us"
-                       class="delay03 relative nav-link  menu_lv1 ">About Us</a>
+                    <a title="About Us"
+                       class="delay03 relative nav-link  menu_lv1 ">
+                     {{'about_us'|translate}}
+                    </a>
                   </li>
 
                   <li class="nav-item dropdown">
-                    <a href="pages/contact.html" title="Contact Us"
-                       class="delay03 relative nav-link  menu_lv1 ">Contact Us</a>
+                    <div [routerLink]="'/contact-us'" title="Contact Us"
+                       class="delay03 cursor-pointer relative nav-link  menu_lv1 ">
+                      {{'contact_as'|translate}}
+                    </div>
                   </li>
                 </ul>
               </div>
@@ -42,20 +42,23 @@
           <div class="cart-login-search align-items-center">
             <ul class="list-inline list-unstyled mb-0">
               <li class="list-inline-item mr-0">
-                <a href="javascript:void(0)" class="search js-search-destop">
-
-                  <i class="ti-search"></i>
-
-                </a>
+                <app-language-controller>
+                </app-language-controller>
+<!--                <div class="cursor-pointer lang-selector">-->
+<!--                  <select name="language-picker-select"-->
+<!--                          [formControl]="languageSelector" id="language-picker-select">-->
+<!--                    <option *ngFor="let lang of languages" [value]="lang.value">{{lang.label}}</option>-->
+<!--                  </select>-->
+<!--                </div>-->
               </li>
-              <li class="list-inline-item mr-0">
-                <a href="javascript:void(0)" class="login js-call-popup-login">
+<!--              <li class="list-inline-item mr-0">-->
+<!--                <a href="javascript:void(0)" class="login js-call-popup-login">-->
 
-                  <i class="ti-user"></i>
+<!--                  <i class="ti-user"></i>-->
 
 
-                </a>
-              </li>
+<!--                </a>-->
+<!--              </li>-->
             </ul>
           </div>
           <div class="clearfix"></div>
@@ -69,13 +72,13 @@
 
 <!-- HEADING HIDDEN SEO -->
 
-<h1 class="sr-only">Charmee - Perfume And Cosmetics Shopify Theme</h1>
+<h1 class="sr-only">Arabian Wind</h1>
 
 
 <div class="search-full-destop">
   <div class="search-eveland js-box-search">
     <h3 class="drawer-search-title">Start typing and hit Enter</h3>
-    <form class="wg-search-form" action="https://charmee-store-demo.myshopify.com/search">
+    <form class="wg-search-form">
       <input type="hidden" name="type" value="product">
       <input type="text" name="q" placeholder="Search anything" class="search-input">
       <button type="submit"><i class="icon-icon-search"></i></button>
@@ -131,31 +134,22 @@
 <div class="js-bg bg-minicart"></div>
 
 <div class="menu_moblie d-flex d-xl-none jsmenumobile align-items-center ">
-  <a href="javascript:void(0)" title="" class="menuleft">
-    <span class="iconmenu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </span>
-  </a>
   <div class="logo_menumoblie">
-
-
     <a href="index.html">
-
-      <img src="./assets/files/logo_mobile_trang24a2.png?v=1581579465"
+      <img src="https://cdn.discordapp.com/attachments/902439034318651415/1027674492086005880/1.png"
            width="140" alt="logo">
-
     </a>
-
-
   </div>
   <div class="menuright">
-    <a href="javascript:void(0)" class=" pr-3 js-search-destop">
+    <app-language-controller>
+    </app-language-controller>
+<!--    <div class="cursor-pointer lang-selector dark">-->
 
-      <i class="ti-search"></i>
-
-    </a>
+<!--      <select name="language-picker-select"-->
+<!--              [formControl]="languageSelector">-->
+<!--        <option *ngFor="let lang of languages" [value]="lang.value">{{lang.label}}</option>-->
+<!--      </select>-->
+<!--    </div>-->
   </div>
 </div>
 <div class="box_contentmenu_background">
@@ -222,7 +216,6 @@
                 </div>
                 <div class="mailrrr mt-3">
                   <form method="post"
-                        action="https://charmee-store-demo.myshopify.com/account/login"
                         id="customer_login" accept-charset="UTF-8"><input type="hidden"
                                                                           name="form_type"
                                                                           value="customer_login"/><input
@@ -257,7 +250,6 @@
                 </div>
               </div>
               <form method="post"
-                    action="https://charmee-store-demo.myshopify.com/account/recover"
                     accept-charset="UTF-8"><input type="hidden" name="form_type"
                                                   value="recover_customer_password"/><input
                 type="hidden" name="utf8" value="✓"/>
@@ -353,7 +345,7 @@
           </div>
           <h2 class="title-tab-login">Great to have you back!</h2>
           <div class="mailrrr mt-3">
-            <form method="post" action="https://charmee-store-demo.myshopify.com/account/login"
+            <form method="post"
                   id="customer_login" accept-charset="UTF-8"><input type="hidden" name="form_type"
                                                                     value="customer_login"/><input
               type="hidden" name="utf8" value="✓"/>
@@ -385,7 +377,7 @@
               class="ml-2 ti-arrow-right"></i></a></div>
           </div>
         </div>
-        <form method="post" action="https://charmee-store-demo.myshopify.com/account/recover"
+        <form method="post"
               accept-charset="UTF-8"><input type="hidden" name="form_type"
                                             value="recover_customer_password"/><input type="hidden"
                                                                                       name="utf8"
@@ -425,7 +417,7 @@
           </div>
           <span class="title_resgister">Register</span>
           <div class="mailrrr mt-3">
-            <form method="post" action="https://charmee-store-demo.myshopify.com/account"
+            <form method="post"
                   id="create_customer" accept-charset="UTF-8"><input type="hidden" name="form_type"
                                                                      value="create_customer"/><input
               type="hidden" name="utf8" value="✓"/>

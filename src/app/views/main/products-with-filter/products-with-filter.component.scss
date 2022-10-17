@@ -1,0 +1,36 @@
+.img-product {
+  height: 328px;
+}
+
+.img-product {
+  //padding-top: 100%;
+  position: relative;
+}
+
+.tab-pane {
+  .row {
+    justify-content: center;
+  }
+}
+
+//.img-product .thumb-link {
+//  position: absolute;
+//  width: 100%;
+//  height: 100%;
+//  top: 0;
+//  left: 0;
+//  display: flex !important;
+//  align-items: center;
+//  justify-content: center;
+//}
+//
+.img-product .thumb-link img {
+  min-height: 491px;
+  width: 100%;
+  object-fit: cover;
+  //  object-position: center;
+}
+
+.product-item-v1 {
+  margin-top: unset;
+}

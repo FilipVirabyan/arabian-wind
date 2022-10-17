@@ -1,0 +1,32 @@
+<li class="dropdown language-selector open">
+  <div class="cursor-pointer dropdown-toggle" data-toggle="dropdown" data-close-others="true" aria-expanded="true">
+    <img [src]="currentLang" width="16" height="16"> </div>
+  <ul class="dropdown-menu pull-right">
+    <li>
+
+    <li class="active">
+      <div class="cursor-pointer" (click)="langChange('en')">
+        <img src="https://stripe.com/img/flags/gb.png"
+             width="16"
+             height="16">
+        <span>English</span> </div></li>
+    <li>
+      <div class="cursor-pointer" (click)="langChange('ru')">
+        <img src="https://stripe.com/img/flags/ru.png" width="16" height="16">
+        <span>Русский</span>
+      </div>
+    </li>
+    <li>
+      <div class="cursor-pointer" (click)="langChange('ar')">
+        <img src="https://stripe.com/img/flags/ae.png" width="16" height="16">
+        <span>عربي</span>
+      </div>
+    </li>
+    <li>
+      <div class="cursor-pointer" (click)="langChange('am')">
+        <img src="https://stripe.com/img/flags/am.png" width="16" height="16">
+        <span>հայերեն</span>
+      </div>
+    </li>
+  </ul>
+</li>

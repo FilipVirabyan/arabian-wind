@@ -1,1 +1,81 @@
+#header {
+  padding-top: 0;
+  padding-bottom: 15px;
+}
 
+.menu_moblie {
+  background-color: whitesmoke !important;
+  .menuright{
+    width: unset;
+  }
+}
+
+.header-absolute:not(.menu_scroll_v1):not(.dark) {
+  .nav-link {
+    color: whitesmoke !important;
+  }
+
+  .lang-selector {
+    border: 1px solid whitesmoke !important;
+    padding: 5px;
+    color: whitesmoke;
+
+    &.dark {
+      color: black;
+      border-color: black !important;
+
+      select {
+        color: black;
+      }
+    }
+
+    select {
+      background: transparent;
+      color: whitesmoke;
+      padding: unset;
+      border: none;
+    }
+  }
+}
+
+.lang-selector {
+  border: 1px solid whitesmoke !important;
+  padding: 5px;
+  color: whitesmoke;
+
+  &.dark {
+    color: black;
+    border-color: black !important;
+
+    select {
+      color: black;
+    }
+  }
+
+  select {
+    background: transparent;
+    color: whitesmoke;
+    padding: unset;
+    border: none;
+  }
+}
+
+.lang-selector {
+  border: 1px solid black !important;
+  padding: 5px;
+  color: black;
+
+  select {
+    background: transparent;
+    color: black;
+    padding: unset;
+    border: none;
+  }
+
+  select option {
+    cursor: pointer;
+    margin: 40px;
+    background: transparent;
+    color: black;
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "about_us": "About Us",
+  "all": "All",
+  "contact_as": "Contact Us",
+  "equipment": "EQUIPMENT",
+  "new_arrivals": "NEW ARRIVALS",
+  "best_sellers": "BEST SELLERS",
+  "top_rates": "TOP RATES",
+  "follow_us": "FOLLOW US",
+  "journal": "JOURNAL",
+  "top_notes": "TOP NOTES",
+  "top_notes_description": "The most vivid and energetic, these are a perfume’s most volatile scents. They are what you smell first, establishing a fragrance’s first impression. But, as they are fleeting due to their lighter, smaller molecules, they evaporate quickly. Top notes should be carefully selected, allowing for a pleasant, smooth transition into the next part of the olfactory pyramid.",
+  "average_duration": "Average duration",
+  "average_duration_description" : "{{1}} – {{2}} minutes",
+  "middle_notes": "MIDDLE NOTES",
+  "middle_notes_description": "These are the fragrance notes you perceive once the top notes have disappeared. They ensure the continuity of the top notes and prepare for a smooth transition into the base notes. Considered the “soul”, or personality, of a perfume, heart notes make up the majority of a fragrance’s scent. As such, they are evident throughout the full life of the fragrance.",
+  "base_notes": "BASE NOTES",
+  "see_more" : "See More",
+  "description": "DESCRIPTION",
+  "review": "REVIEW",
+  "additional_info": "ADDITIONAL INFORMATION",
+  "base_notes_description": "Along with the heart notes, base notes tend to add depth and resonance which help build the foundation of a perfume. These notes appear more gradually but also evaporate more gradually."
+}

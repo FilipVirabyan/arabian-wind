@@ -1,1 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+
+app-product-page {
+  @media (min-width: 1200px) {
+    #shopify-section-header {
+      height: 100px;
+    }
+  }
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+  .dropdown-menu {
+    top: 30px !important;
+    left: -30px !important;
+    transform: unset !important;
+  }
