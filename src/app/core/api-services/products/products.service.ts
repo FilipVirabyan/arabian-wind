@@ -26,4 +26,9 @@ export class ProductsService {
     const url = `${environment.baseUrl}language-code`;
     return this._http.get<Product[]>(url);
   }
+
+  sendEmail(message: any): Observable<any> {
+    const url = `${environment.baseUrl}contact-us/send`;
+    return this._http.post<any>(url, message);
+  }
 }

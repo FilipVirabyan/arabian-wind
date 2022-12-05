@@ -1,0 +1,148 @@
+<nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">Arabian Wind</a>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" href="#">Sign out</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-xl px-4 mt-4">
+  <hr class="mt-0 mb-4">
+  <div class="row" [formGroup]="productForm">
+    <div class="col-xl-4">
+      <!-- Profile picture card-->
+      <div class="card mb-4 mb-xl-0">
+        <div class="card-header">First Block Pictures</div>
+        <div class="card-body text-center">
+          <!-- Profile picture image-->
+          <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png"
+               alt="">
+          <!-- Profile picture help block-->
+          <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+          <!-- Profile picture upload button-->
+          <button class="btn btn-primary" type="button">Upload new image</button>
+        </div>
+      </div>
+      <div class="card mb-4 mt-2 mb-xl-0">
+        <div class="card-header">Second Block Pictures</div>
+        <div class="card-body text-center">
+          <!-- Profile picture image-->
+          <img class="img-account-profile rounded-circle mb-2" src="http://bootdey.com/img/Content/avatar/avatar1.png"
+               alt="">
+          <!-- Profile picture help block-->
+          <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
+          <!-- Profile picture upload button-->
+          <button class="btn btn-primary" type="button">Upload new image</button>
+        </div>
+      </div>
+    </div>
+    <div class="col-xl-8">
+      <!-- Account details card-->
+      <div class="card mb-4">
+        <div class="card-header">Product Details</div>
+        <div class="card-body">
+          <form>
+            <!-- Form Group (username)-->
+            <div class="mb-3">
+              <label class="small mb-1" for="inputUsername">Product Name</label>
+              <input class="form-control" formControlName="name" id="inputUsername" type="text"
+                     placeholder="Enter your product name">
+            </div>
+            <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress">Description</label>
+              <textarea class="form-control" formControlName="description" placeholder="Enter your email Description">
+              </textarea>
+            </div>
+            <!-- Form Group (email address)-->
+            <div class="mb-3">
+              <label class="small mb-1" for="inputEmailAddress">Email address</label>
+              <input class="form-control" id="inputEmailAddress" type="email" placeholder="Enter your email address"
+                     value="name@example.com">
+            </div>
+            <h4>Notes</h4>
+            <!-- Form Group (email address)-->
+            <div class="d-flex">
+              <h5>Top Notes</h5>
+              <span class="add-note" (click)="addNote('top_notes')">+</span>
+            </div>
+            <div class="mb-3 notes-wrapper d-flex" [formArrayName]="'top_notes'">
+              <div class="col-md-4 note-box mr-3 mb-3  d-flex justify-content-between align-content-center flex-column" *ngFor="let note of topNotesControl.controls;let i = index">
+                <ng-container [formGroupName]="i">
+                  <input class="form-control mt-2"
+                         formControlName="name"
+                         type="text"
+                         placeholder="Enter your first name">
+                  <div class="upload-btn-wrapper cursor-pointer" *ngIf="!topNotesControl.at(i).value.image">
+                    <button class="file-btn cursor-pointer">Upload a image</button>
+                    <input (change)="changeNoteImage(topNotesControl.at(i), $event.target)" type="file" name="myfile"
+                           accept=".png, .jpg, .jpeg"/>
+                  </div>
+                  <img  *ngIf="topNotesControl.at(i).value.image" class="note-image" [src]="topNotesControl.at(i).value.image">
+                  <div class="d-flex justify-content-center my-2">
+                    <button class="btn btn-danger m-2" *ngIf="topNotesControl.at(i).value.image">Remove Image</button>
+                    <button class="btn btn-danger m-2" (click)="removeNote(topNotesControl, i)">Delete Note</button>
+                  </div>
+                </ng-container>
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <h5>Middle Notes</h5>
+              <span class="add-note" (click)="addNote('middle_notes')">+</span>
+            </div>
+            <div class="mb-3 notes-wrapper d-flex" [formArrayName]="'middle_notes'">
+              <div class="col-md-4 note-box mr-3 mb-3  d-flex justify-content-between align-content-center flex-column" *ngFor="let note of middleNotesControl.controls;let i = index">
+                <ng-container [formGroupName]="i">
+                  <input class="form-control mt-2"
+                         formControlName="name"
+                         type="text"
+                         placeholder="Enter your first name">
+                  <div class="upload-btn-wrapper cursor-pointer" *ngIf="!middleNotesControl.at(i).value.image">
+                    <button class="file-btn cursor-pointer">Upload a image</button>
+                    <input (change)="changeNoteImage(middleNotesControl.at(i), $event.target)" type="file" name="myfile"
+                           accept=".png, .jpg, .jpeg"/>
+                  </div>
+                  <img  *ngIf="middleNotesControl.at(i).value.image" class="note-image" [src]="middleNotesControl.at(i).value.image">
+                  <div class="d-flex justify-content-center my-2">
+                    <button class="btn btn-danger m-2" *ngIf="middleNotesControl.at(i).value.image">Remove Image</button>
+                    <button class="btn btn-danger m-2" (click)="removeNote(middleNotesControl, i)">Delete Note</button>
+                  </div>
+                </ng-container>
+
+              </div>
+            </div>
+            <div class="d-flex">
+              <h5>Base Notes</h5>
+              <span class="add-note" (click)="addNote('base_notes')">+</span>
+            </div>
+            <div class="mb-3 notes-wrapper d-flex" [formArrayName]="'base_notes'">
+              <div class="col-md-4 note-box mr-3 mb-3 d-flex justify-content-between align-content-center flex-column" *ngFor="let note of baseNotesControl.controls;let i = index">
+                <ng-container [formGroupName]="i">
+                  <input class="form-control mt-2"
+                         formControlName="name"
+                         type="text"
+                         placeholder="Enter your first name">
+                  <div class="upload-btn-wrapper cursor-pointer" *ngIf="!baseNotesControl.at(i).value.image">
+                    <button class="file-btn cursor-pointer">Upload a image</button>
+                    <input (change)="changeNoteImage(baseNotesControl.at(i), $event.target)" type="file" name="myfile"
+                           accept=".png, .jpg, .jpeg"/>
+                  </div>
+                  <img  *ngIf="baseNotesControl.at(i).value.image"
+                        class="note-image"
+                        [src]="baseNotesControl.at(i).value.image">
+                  <div class="d-flex justify-content-center my-2">
+                    <button class="btn btn-danger m-2" *ngIf="baseNotesControl.at(i).value.image">Remove Image</button>
+                    <button class="btn btn-danger m-2" (click)="removeNote(baseNotesControl, i)">Delete Note</button>
+                  </div>
+                </ng-container>
+
+              </div>
+            </div>
+            <!-- Save changes button-->
+            <button class="btn btn-primary" type="button">Save changes</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

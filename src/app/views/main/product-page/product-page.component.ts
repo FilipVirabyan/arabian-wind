@@ -26,6 +26,15 @@ export class ProductPageComponent implements OnInit, AfterViewInit, OnDestroy {
     'Top Rates'
   ]
   subs!: Subscription;
+  options = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots: false,
+    arrows: false,
+    fade: true,
+  }
 
   constructor(private _productApiService: ProductsService,
               private spinner: NgxSpinnerService,
@@ -54,28 +63,10 @@ export class ProductPageComponent implements OnInit, AfterViewInit, OnDestroy {
       .pipe(finalize(() => this.spinner.hide()))
       .subscribe((prod) => {
         this.product = prod
-        $('.slick_product_new-h4').slick("unslick");
-        this.initSlider(!isLang ? 1000 : 100);
       })
   }
 
   ngAfterViewInit() {
-  }
-
-  initSlider(duration = 1000) {
-    setTimeout(() => {
-      console.log('ngAfterViewInit');
-      $('.slick_product_new-h4').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 2000,
-        dots: false,
-        arrows: false,
-        fade: true,
-      });
-    }, duration)
-
   }
 
   ngOnDestroy() {

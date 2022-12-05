@@ -18,6 +18,8 @@ import { GetNoteNamePipe } from './pipes/get-note-name.pipe';
 import {TranslateModule} from '@ngx-translate/core';
 import { LanguageControllerComponent } from './language-controller/language-controller.component';
 import { NotesSliderPipe } from './pipes/notes-slider.pipe';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 @NgModule({
@@ -35,13 +37,15 @@ import { NotesSliderPipe } from './pipes/notes-slider.pipe';
     ContactComponent,
     GetNoteNamePipe,
     LanguageControllerComponent,
-    NotesSliderPipe
+    NotesSliderPipe,
+    AboutUsComponent
   ],
-  imports: [
-    CommonModule,
-    MainRoutingModule,
-    ReactiveFormsModule,
-    TranslateModule,
-  ]
+    imports: [
+        CommonModule,
+        MainRoutingModule,
+        ReactiveFormsModule,
+        TranslateModule,
+        SlickCarouselModule,
+    ]
 })
 export class MainModule { }

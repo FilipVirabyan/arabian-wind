@@ -1,18 +1,16 @@
 <div id="shopify-section-1578017585177" class="shopify-section index-section">
   <div data-section-id="1578017585177" data-section-type="section-slideshow-v1" style="  ">
     <div class="section-slideshow-v1">
-      <div class="slick-side-h1">
-
-
-        <div class="itemv-slide-h1">
+      <ngx-slick-carousel [config]="options">
+        <div class="itemv-slide-h1" ngxSlickItem>
           <div class="  info-sideh1 ">
             <div class="picture-slideshow">
 
-              <a href="#">
-                <img class="w-100"
+              <div [routerLink]="'/product/d3a6e82a-7dab-4559-b3bc-7e8b0a308654'">
+                <img class="w-100 cursor-pointer"
                      src="./assets/images/cover_1.jpg"
                      class="img-responsive img_slideh1" alt="">
-              </a>
+              </div>
 
             </div>
 
@@ -32,6 +30,7 @@
                 </div>
 
                 <a class="mt-4 button-main1 button-shop-1578017585177-1 "
+                   (click)="scrollTo()"
                    href="#products-slider">
                   {{'see_more'|translate}}
                 </a>
@@ -44,14 +43,14 @@
         </div>
 
 
-        <div class="itemv-slide-h1">
+        <div class="itemv-slide-h1" ngxSlickItem>
           <div class="  info-sideh1 ">
             <div class="picture-slideshow">
-              <a href="#">
-                <img class="w-100"
-                     src="./assets/images/cover_2.jpg"
-                     class="img-responsive img_slideh1" alt="">
-              </a>
+              <div class="cursor-pointer"
+                   [routerLink]="'./product/dbb356af-3543-4ec9-8c2e-fcd41891087b'">
+                <img src="./assets/images/cover_2.jpg"
+                     class="img-responsive img_slideh1 w-100" alt="">
+              </div>
 
             </div>
 
@@ -70,11 +69,10 @@
 
                 </div>
 
-                <a class="mt-4 button-main1 button-shop-1578017585177-0 "
-                   href="#products-slider"
-                >
+                <div class="mt-4 cursor-pointer button-main1 button-shop-1578017585177-0 "
+                     [routerLink]="'./product/dbb356af-3543-4ec9-8c2e-fcd41891087b'">
                   {{'see_more'|translate}}
-                </a>
+                </div>
 
 
               </div>
@@ -84,15 +82,16 @@
         </div>
 
 
-        <div class="itemv-slide-h1">
+        <div class="itemv-slide-h1" ngxSlickItem>
           <div class="  info-sideh1 ">
             <div class="picture-slideshow">
 
-              <a href="#">
+              <div class="cursor-pointer"
+                   [routerLink]="'./product/16910c3-56d1-4f7f-9a94-77a0514de4c2'">
                 <img class="w-100"
                      src="./assets/images/cover_3.jpg"
                      class="img-responsive img_slideh1" alt="">
-              </a>
+              </div>
 
             </div>
 
@@ -111,10 +110,10 @@
 
                 </div>
 
-                <a class="mt-4 button-main1 button-shop-1578017585177-2 "
-                   href="#products-slider">
+                <div class="mt-4 button-main1 button-shop-1578017585177-2 cursor-pointer"
+                     [routerLink]="'./product/16910c3-56d1-4f7f-9a94-77a0514de4c2'">
                   {{'see_more'|translate}}
-                </a>
+                </div>
 
 
               </div>
@@ -122,9 +121,7 @@
             </div>
           </div>
         </div>
-
-
-      </div>
+      </ngx-slick-carousel>
     </div>
   </div>
 

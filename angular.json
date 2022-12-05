@@ -43,7 +43,9 @@
               "src/assets1/threesixtyeddc.css",
               "src/assets1/jquery.flipster.min8442.css",
               "src/assets1/style-main.scssbfc7.css",
-              "src/assets1/engo-customize.scss3d14.css"
+              "src/assets1/engo-customize.scss3d14.css",
+              "node_modules/slick-carousel/slick/slick.scss",
+              "node_modules/slick-carousel/slick/slick-theme.scss"
             ],
             "scripts": [
               "src/assets1/jquery/1.11.0/jquery.min.js",
@@ -61,7 +63,8 @@
               "src/assets1/ajax-cartbacd.js",
               "src/assets1/handlebars.mind5b2.js",
               "src/assets1/fastclick9a56.js",
-              "src/assets1/timber6cb8.js"
+              "src/assets1/timber6cb8.js",
+              "node_modules/slick-carousel/slick/slick.min.js"
             ]
           },
           "configurations": {

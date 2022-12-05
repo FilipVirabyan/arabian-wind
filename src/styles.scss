@@ -17,8 +17,13 @@ html {
 }
 
 
-  .dropdown-menu {
-    top: 30px !important;
-    left: -30px !important;
-    transform: unset !important;
-  }
+.dropdown-menu {
+  top: 30px !important;
+  left: -30px !important;
+  transform: unset !important;
+}
+
+.dropdown-toggle::after {
+  margin-top: 15px;
+}
+

@@ -5,8 +5,14 @@
 
 .menu_moblie {
   background-color: whitesmoke !important;
-  .menuright{
+
+  .menuright {
     width: unset;
+    display: flex;
+
+    ul {
+      display: flex;
+    }
   }
 }
 
@@ -77,5 +83,18 @@
     margin: 40px;
     background: transparent;
     color: black;
+  }
+}
+
+.menu_moblie {
+
+  .nav-item {
+    color: black;
+  }
+}
+
+.logo_menumoblie{
+  img{
+    max-width: 80%;
   }
 }

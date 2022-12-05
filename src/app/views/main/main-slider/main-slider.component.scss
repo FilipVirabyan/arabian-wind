@@ -1,7 +1,8 @@
 .picture-slideshow {
   img {
     height: 1000px;
-    width: 1900px;
+    width: 100vw;
+    max-height: 100vh;
   }
 }
 

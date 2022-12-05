@@ -16,12 +16,25 @@ declare var $: any;
 export class ProductsSliderComponent implements OnInit, AfterViewInit, OnDestroy {
   products: Product[] = [];
   hidden = true
+  options = {
+    arrows: !0,
+    infinite: !0,
+    dots: !1,
+    speed: 300,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    autoplay: !0,
+    autoplaySpeed: 2e3,
+    prevArrow: '<button type="button" class="prev-slide"><i class="fa fa-long-arrow-left"></i> </button>',
+    nextArrow: '<button type="button" class="next-slide"><i class="fa fa-long-arrow-right"></i> </button>',
+    responsive: [{breakpoint: 1200, settings: {slidesToShow: 3}}, {
+      breakpoint: 1024,
+      settings: {slidesToShow: 3}
+    }, {breakpoint: 600, settings: {slidesToShow: 2}}]
+  }
 
   @Input() set prods(prods: Product[]) {
     if (prods.length) {
-      if (!this.products) {
-        this._setSlider()
-      }
       this.products = prods;
     }
   };
@@ -46,32 +59,8 @@ export class ProductsSliderComponent implements OnInit, AfterViewInit, OnDestroy
   private listenTranslateChange() {
     this.subs = this._translateService.onLangChange
       .subscribe(value => {
-        $('.slick_product_new-h4').slick("unslick");
         this.hidden = true
-        this._setSlider()
       })
-  }
-
-  private _setSlider(timeout = 2000) {
-    setTimeout(() => {
-      this.hidden = false
-      $(".slick_product_new-h4").slick({
-        arrows: !0,
-        infinite: !0,
-        dots: !1,
-        speed: 300,
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        autoplay: !0,
-        autoplaySpeed: 2e3,
-        prevArrow: '<button type="button" class="prev-slide"><i class="fa fa-long-arrow-left"></i> </button>',
-        nextArrow: '<button type="button" class="next-slide"><i class="fa fa-long-arrow-right"></i> </button>',
-        responsive: [{breakpoint: 1200, settings: {slidesToShow: 3}}, {
-          breakpoint: 1024,
-          settings: {slidesToShow: 3}
-        }, {breakpoint: 600, settings: {slidesToShow: 2}}]
-      })
-    }, timeout)
   }
 
   ngOnDestroy() {

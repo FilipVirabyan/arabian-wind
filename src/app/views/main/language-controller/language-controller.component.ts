@@ -11,7 +11,6 @@ declare var $: any;
 export class LanguageControllerComponent implements OnInit {
   languages = {
     en: 'https://stripe.com/img/flags/gb.png',
-    am: 'https://stripe.com/img/flags/am.png',
     ar: 'https://stripe.com/img/flags/ae.png',
     ru: 'https://stripe.com/img/flags/ru.png'
   }

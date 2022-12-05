@@ -1,5 +1,20 @@
 .img-product {
-  height: 328px;
+  padding-top: 100%;
+
+  .thumb-link{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    min-height: unset;
+  }
+
   //width: 200px;
 }
 
@@ -13,6 +28,16 @@
 }
 
 
-.invisible{
+.invisible {
   opacity: 0;
+}
+
+.title-product{
+  div{
+    height: 60px;
+  }
+}
+
+.price-product{
+  margin-top: 0 !important;
 }

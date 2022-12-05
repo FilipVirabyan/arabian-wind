@@ -1,5 +1,23 @@
 .img-product {
-  height: 328px;
+  padding-top: 100%;
+
+  .thumb-link{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    min-height: unset;
+    width: 100%;
+    height: 100%;
+  }
+
+  //width: 200px;
 }
 
 .img-product {
@@ -25,10 +43,12 @@
 //}
 //
 .img-product .thumb-link img {
-  min-height: 491px;
+  //min-height: 491px;
   width: 100%;
   object-fit: cover;
   //  object-position: center;
+  object-position: center;
+  min-height: unset;
 }
 
 .product-item-v1 {
